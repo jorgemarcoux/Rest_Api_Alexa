@@ -59,6 +59,7 @@ namespace RestApi.Controllers
             return Content (amount.ToString (), "application/json");
         }
 
+        //Get total number of inactive elevators
         [HttpGet("Inactive/Amount")]
         public async Task<IActionResult> getInactiveAmount()
         {
@@ -68,7 +69,7 @@ namespace RestApi.Controllers
             {
                 return NotFound();
             }
-            List<Elevator> inactive_elevator_list = new List<Elevator>(); // Elevators will be added in this list if they respect the requirements (If they don't have an ACTIVE status)
+            List<Elevator> inactive_elevator_list = new List<Elevator>(); // Elevators will be added to this list if they don't have an ACTIVE status
             // Add elevators in the list if they don't have an ACTIVE status
             foreach (var elevator in list)
             {
@@ -82,6 +83,18 @@ namespace RestApi.Controllers
             amount["amount"] = listCount;
             return Content (amount.ToString (), "application/json");
         }
+
+        //Get list of inactive elevators
+        // GET: api/Elevators/oos
+        [HttpGet("inactive/list")]
+        public async Task<ActionResult<IEnumerable<Elevator>>> GetInactiveElevators()
+        {
+            var outOfServiceElevators = await _context.elevators
+        .Where(e => !e.elevator_status.Contains("ACTIVE"))
+        .ToListAsync();
+            return outOfServiceElevators;
+        }
+
 
         // GET: api/Elevator/5
         [HttpGet("{id}")]
