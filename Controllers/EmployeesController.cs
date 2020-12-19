@@ -34,6 +34,22 @@ namespace RestApi.Controllers
             return _context.employees.Any(e => e.Id == id);
         }
 
+        // GET: api/employees/find/{email}
+        [HttpGet("find/{email}")]
+        public ActionResult<Employe> GetEmployeeEmail(string email)
+        {
+            var decodedEmail = System.Web.HttpUtility.UrlDecode(email);
+            Console.WriteLine(decodedEmail);
+            var employeeEmail = _context.employees
+            .Where(e => e.email == decodedEmail);
+            //.FirstOrDefaultAsync();
+            if (employeeEmail == null)
+            {
+                return NotFound();
+            }
+            return Ok(employeeEmail);
+        }
+
     }
 
 
