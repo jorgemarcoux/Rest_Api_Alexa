@@ -9785,19 +9785,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "/home/jmarcoux/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\alexa\\Rest_Api_Alexa\\RestApi.csproj",
+      "projectUniqueName": "/home/jmarcoux/Odyssey/Rest_Api_Alexa/RestApi.csproj",
       "projectName": "RestApi",
-      "projectPath": "C:\\Users\\User\\alexa\\Rest_Api_Alexa\\RestApi.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\alexa\\Rest_Api_Alexa\\obj\\",
+      "projectPath": "/home/jmarcoux/Odyssey/Rest_Api_Alexa/RestApi.csproj",
+      "packagesPath": "/home/jmarcoux/.nuget/packages/",
+      "outputPath": "/home/jmarcoux/Odyssey/Rest_Api_Alexa/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/jmarcoux/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -9807,7 +9807,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -9819,7 +9818,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "ExtCore.Data.EntityFramework.MySql": {
             "target": "Package",
@@ -9882,16 +9880,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.1.8, 3.1.8]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.9, 3.1.9]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -9900,7 +9888,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.404/RuntimeIdentifierGraph.json"
       }
     }
   },
