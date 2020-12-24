@@ -1,3 +1,11 @@
+
+# Week 14 New Endpoints
+
+/api/elevator/inactive/list  - To get a list of all non-operational elevators
+/api/employees/fin/email - To find an employee by his or her email
+
+
+
 # Rocket Elevator Foundation Week 9
 
 ## How to know and to mapiuplate the status of all the relevant entities of the operational database
